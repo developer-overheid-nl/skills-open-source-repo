@@ -1,8 +1,6 @@
-# Skills Repo Docs Generator
+# Skills: Open Source Repository
 
-De Skills Repo Docs Generator is een Claude Code skill die ontwikkelaars bij de Nederlandse overheid helpt om hun repository klaar te maken voor open source publicatie. De skill genereert bestanden zoals publiccode.yml, README.md, CONTRIBUTING.md, SECURITY.md en LICENSE op basis van projectinformatie. Daarnaast controleert de skill of de benodigde bestanden al aanwezig zijn en werkt bestaande bestanden bij waar nodig.
-
-Ga naar []() voor meer informatie.
+Open Source Repository Skill is een Agent Skill die ontwikkelaars bij de Nederlandse overheid helpt om hun repository klaar te maken voor open source publicatie. De skill genereert bestanden zoals publiccode.yml, README.md, CONTRIBUTING.md, SECURITY.md en LICENSE op basis van projectinformatie. Daarnaast controleert de skill of de benodigde bestanden al aanwezig zijn en werkt bestaande bestanden bij waar nodig.
 
 ## Features
 Deze codebase bestaat uit de volgende features:
@@ -27,7 +25,7 @@ Deze codebase bestaat uit de volgende features:
 
 ```bash
 # Clone de repository
-git clone https://github.com/developer-overheid-nl/skills-repo-docs-generator
+git clone https://github.com/developer-overheid-nl/skills-open-source-repo
 cd project-directory
 
 # Installeer dependencies
