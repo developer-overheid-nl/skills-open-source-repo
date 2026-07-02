@@ -1,5 +1,5 @@
 ---
-name: generate-repo-docs-files
+name: open-source-repo
 description: >-
   Maak de bestanden aan die nodig zijn voor een goed open source project, of
     controleer of ze al aanwezig zijn. Gebruik deze skill wanneer de gebruiker
@@ -50,73 +50,12 @@ Maak alle benodigde bestanden aan die je nodig hebt om je project te open source
 - Doe dit doormiddel van het aanmaken van een input.json op basis van de beschikbare projectinformatie. De input.json geef je vorm aan de hand van deze schema.json: https://github.com/developer-overheid-nl/repo-docs-generator/blob/main/input_json_schema.json
 - Vraag zo nodig aan de user om extra input als je niet voldoende informatie hebt voor het aanmaken van de files.
 
-## Projectinformatie verzamelen
+## Roep "generate-publiccode-yml" skill aan
+Roep deze skill aan om de publiccode.yml te genereren. Dit dient alsnog te gebeuren op basis van de repo-docs-generator tool.
 
-Zoek naar de volgende bestanden en lees ze om projectinformatie te verzamelen:
-
-- `README.md` — naam, beschrijving, doel van het project
-- Doorzoek het project op een `openapi.json` bestand. Gebruik de inhoud hiervan
-  bij het genereren van de publiccode.yml.
-- `package.json` / `pom.xml` / `pyproject.toml` / `Cargo.toml` / `go.mod` —
-  controleer of er nuttige eigenschappen in staan.
-- Bestaande lokale `publiccode.yml` — als die bestaat, werk deze bij in plaats
-  van een nieuwe aan te maken.
-- `.git/config` of remote URL — voor de `url` van de repository.
-
-Haal aanvullende informatie op via de remote:
-
-- Gebruik de repository-URL om projectinformatie op te halen van de git-omgeving
-  (GitHub / GitLab / Forgejo).
-- Haal voor `maintenance.contacts[].name` de weergavenaam van de
-  GitHub-organisatie op via de organisatiepagina (bijv.
-  `https://github.com/<org>`). Gebruik de weergavenaam zoals getoond op de
-  profielpagina, niet de slug uit de URL.
-- Gebruik diezelfde weergavenaam ook als `legal.mainCopyrightOwner`.
-- Als er geen git link te vinden is vraag dan om input aan de user.
-
-## LandingURL bepalen
-
-Zoek naar een live URL waarop de software draait (bijv. in README, `one.json`,
-CI/CD-configuratie of andere configuratiebestanden). Als die gevonden wordt,
-voeg deze toe als `landingURL` direct onder `url`. Zet de URL **niet** in de
-`longDescription`.
-
-## Licentie bepalen
+## 1. Licentie bepalen
 
 Gebruik de license file die de `repo-docs-generator` CLI genereert.
-
-## SoftwareType bepalen
-
-Gebruik de volgende criteria (in volgorde van prioriteit):
-
-- Bevat het project een plugin-manifest (`plugin.json`, `.claude-plugin/`,
-  `.vscode/`, etc.) of is het expliciet een extensie/addon voor een andere
-  applicatie? → `addon`
-- Zijn het alleen configuratiebestanden zonder uitvoerbare code? →
-  `configurationFiles`
-- Is het een herbruikbare bibliotheek zonder eigen UI of entrypoint? → `library`
-- Heeft het een webinterface? → `standalone/web`
-- Draait het als achtergrondservice of API zonder eigen UI? →
-  `standalone/backend`
-- Heeft het een desktopinterface? → `standalone/desktop`
-- Anders → `standalone/other`
-
-## Name
-
-Zorg dat de sleutel `name` een normale titel bevat, geen kebab-case, camelCase,
-PascalCase of snake_case.
-
-## releaseDate en softwareVersion
-
-`releaseDate` en `softwareVersion` sleutels **niet** toevoegen. Als ze bestaan,
-verwijder ze dan.
-
-## Valideer de publiccode.yml met don-checker
-
-Valideer de publiccode.yml met https://github.com/developer-overheid-nl/don-checker:
-```
-npx @developer-overheid-nl/don-checker@latest validate --ruleset publiccode-05 --input ./publiccode.yml
-```
 
 ## Referenties
 
