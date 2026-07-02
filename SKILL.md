@@ -45,17 +45,21 @@ Maak alle benodigde bestanden aan die je nodig hebt om je project te open source
 
 ## Instructies
 
-- Gebruik de `repo-docs-generator` om de files te genereren: `npx github:developer-overheid-nl/repo-docs-generator`
-- Zet de files in de root van het project.
-- Doe dit doormiddel van het aanmaken van een input.json op basis van de beschikbare projectinformatie. De input.json geef je vorm aan de hand van deze schema.json: https://github.com/developer-overheid-nl/repo-docs-generator/blob/main/input_json_schema.json
+### Genereer input.json
+- Genereer een `input.json` met de `repo-docs-generator`: `npx github:developer-overheid-nl/repo-docs-generator --init`.
+- Gebruik de `input.json` de rest van het proces als voorbeeld om in te vullen met informatie uit het project.
+- Gebruik voor het genereren van de publiccode.yml deze template: https://raw.githubusercontent.com/developer-overheid-nl/repository-template/refs/heads/main/templates/publiccode.yml.
 - Vraag zo nodig aan de user om extra input als je niet voldoende informatie hebt voor het aanmaken van de files.
 
 ## Roep "generate-publiccode-yml" skill aan
 Roep deze skill aan om de publiccode.yml te genereren. Dit dient alsnog te gebeuren op basis van de repo-docs-generator tool.
 
-## 1. Licentie bepalen
+### Licentie bepalen
 
 Gebruik de license file die de `repo-docs-generator` CLI genereert.
+
+### Genereer files met `repo-docs-generator`
+- Gebruik de `repo-docs-generator` om de files te genereren: `npx github:developer-overheid-nl/repo-docs-generator`
 
 ## Referenties
 
