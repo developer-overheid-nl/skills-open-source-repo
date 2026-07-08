@@ -2,11 +2,11 @@
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/publiccodeyml/publiccode.yml
 
-publiccodeYmlVersion: "0.5"
+publiccodeYmlVersion: "0.7"
 
 # Dit veld bevat de korte naam van het project. Kies hier de naam waaronder het
 # project bekend is bij de meeste mensen.
-name: Skills Repo Docs Generator
+name: "Agent Skills: Open Source Repository"
 
 # De url naar de source code.
 url: https://github.com/developer-overheid-nl/skills-open-source-repo
