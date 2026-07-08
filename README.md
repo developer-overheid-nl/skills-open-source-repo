@@ -9,53 +9,16 @@ Deze codebase bestaat uit de volgende features:
 - Genereert README.md, CONTRIBUTING.md, SECURITY.md en LICENSE
 - Controleert of open source bestanden al aanwezig zijn
 - Werkt bestaande publiccode.yml bij
-- Valideert publiccode.yml met publiccode-parser-go
 
-## Aan de slag
+## repo-docs-generator
 
-### Vereisten
-
-**PROJECTSPECIFIEK**: Voeg de vereisten voor jouw project toe, bijvoorbeeld:
-
-- Node.js >= 18.x / Python >= 3.9 / PHP >= 8.1
-- Git >= 2.30
-- [Andere specifieke dependencies]
-
-### Installatie
-
-```bash
-# Clone de repository
-git clone https://github.com/developer-overheid-nl/skills-open-source-repo
-cd project-directory
-
-# Installeer dependencies
-npm install
-# of
-pip install -r requirements.txt
-# of
-composer install
-```
-
-### Lokaal draaien
-
-```bash
-# Development server starten
-npm run dev
-# of
-python manage.py runserver
-# of
-php artisan serve
-```
-
-## Ontwikkelstatus
-
-Dit project heeft de status: **stable**
+Dit project maakt gebruik van [`repo-docs-generator`](https://github.com/developer-overheid-nl/repo-docs-generator) om de benodigde open source bestanden (zoals publiccode.yml en LICENSE) te genereren.
 
 ## Bijdragen
 
-Leuk dat je overweegt om bij te dragen in dit project. Lees onze [CONTRIBUTING.md](CONTRIBUTING.md) voor meer informatie over hoe je kunt bijdragen.
+Deze Agent Skill verbeteren? Graag! Pas de `Skill.md` aan naar gelang en dien een pull request in.
 
-### Gedragscode
+## Gedragscode
 
 Dit project hanteert een [gedragscode](CODE_OF_CONDUCT.md). Door bij te dragen aan dit project ga je akkoord met de voorwaarden hiervan.
 
@@ -66,7 +29,7 @@ Heb je een potentieel securityissue gevonden? Fijn dat je de moeite hebt genomen
 ## Licentie
 
 Copyright © developer.overheid.nl.
-Licensed under the [EUPL-1.2](LICENCE.md)
+Licensed under the [EUPL-1.2](LICENSE.md)
 
 ## Contact
 
