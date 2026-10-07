@@ -41,6 +41,12 @@ allowed-tools:
 
 # Maak alle bestanden aan die je nodig hebt voor een Open Source project
 
+> **Deze skill is verplaatst** naar
+> https://github.com/developer-overheid-nl/repo-docs-generator, bij de tooling
+> die hij aanroept. Werk de plugin bij met
+> `claude plugin update developer-overheid-open-source-repo@overheid-plugins`.
+> Deze repository wordt gearchiveerd.
+
 Maak alle benodigde bestanden aan die je nodig hebt om je project te open sourcen.
 
 ## Instructies
