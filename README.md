@@ -1,3 +1,19 @@
+> [!IMPORTANT]
+> **Deze skill is verplaatst naar
+> [`developer-overheid-nl/repo-docs-generator`](https://github.com/developer-overheid-nl/repo-docs-generator),**
+> de repository met de tooling die de skill aanroept. Deze repository wordt
+> gearchiveerd en krijgt geen updates meer.
+>
+> De plugin houdt zijn naam, dus je hoeft niets opnieuw te installeren:
+>
+> ```bash
+> claude plugin update developer-overheid-open-source-repo@overheid-plugins
+> ```
+>
+> De skill schrijft de bestanden nu niet meer zelf, maar vult `input.json` en
+> draait de `repo-docs-generator` CLI. De templates in die repository zijn
+> daarmee de enige bron van waarheid voor het formaat.
+
 # Skills: Open Source Repository
 
 Open Source Repository Skill is een Agent Skill die ontwikkelaars bij de Nederlandse overheid helpt om hun repository klaar te maken voor open source publicatie. De skill genereert bestanden zoals publiccode.yml, README.md, CONTRIBUTING.md, SECURITY.md en LICENSE op basis van projectinformatie. Daarnaast controleert de skill of de benodigde bestanden al aanwezig zijn en werkt bestaande bestanden bij waar nodig.
