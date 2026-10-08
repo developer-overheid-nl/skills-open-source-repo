@@ -16,7 +16,7 @@ Dit project maakt gebruik van [`repo-docs-generator`](https://github.com/develop
 
 ## Bijdragen
 
-Deze Agent Skill verbeteren? Graag! Pas de `Skill.md` aan naar gelang en dien een pull request in.
+Deze Agent Skill verbeteren? Graag! Pas `skills/open-source-repo/SKILL.md` aan naar gelang en dien een pull request in.
 
 ## Gedragscode
 
